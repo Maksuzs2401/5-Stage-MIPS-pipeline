@@ -1,0 +1,164 @@
+# run all
+IF stage: taken_branch=x, EX_MEM_type=xxx, EX_MEM_Cond=x
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+WB @5000: Reg[0] <= 00000000 (from instr 00000000)
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+ID @550000: Instr 00000000, A_in=         0, B_in=         0
+EX @555000: Instr 00000000, alu_A=         0, alu_B=         0, ALUOut=         0, Cond=0
+ID @560000: Instr 2801000a, A_in=         0, B_in=         0
+EX @565000: Instr 2801000a, alu_A=         0, alu_B=        10, ALUOut=         0, Cond=0
+WB @565000: Reg[0] <= 00000000 (from instr 00000000)
+ID @570000: Instr 28020014, A_in=         0, B_in=         0
+EX @575000: Instr 28020014, alu_A=         0, alu_B=        20, ALUOut=        10, Cond=0
+WB @575000: Reg[1] <= 0000000a (from instr 2801000a)
+ID @580000: Instr 28030019, A_in=         0, B_in=         0
+EX @585000: Instr 28030019, alu_A=         0, alu_B=        25, ALUOut=        20, Cond=0
+WB @585000: Reg[2] <= 00000014 (from instr 28020014)
+ID @590000: Instr 00222000, A_in=        10, B_in=        20
+EX @595000: Instr 00222000, alu_A=        10, alu_B=        20, ALUOut=        25, Cond=0
+WB @595000: Reg[3] <= 00000019 (from instr 28030019)
+ID @600000: Instr 00832800, A_in=         0, B_in=        25
+EX @605000: Instr 00832800, alu_A=        30, alu_B=        25, ALUOut=        30, Cond=0
+WB @605000: Reg[4] <= 0000001e (from instr 00222000)
+ID @610000: Instr fc000000, A_in=         0, B_in=         0
+EX @615000: Instr fc000000, alu_A=         0, alu_B=         0, ALUOut=        55, Cond=0
+WB @615000: Reg[5] <= 00000037 (from instr 00832800)
+ID @620000: Instr xxxxxxxx, A_in=         x, B_in=         x
+EX @625000: Instr xxxxxxxx, alu_A=         x, alu_B=         x, ALUOut=        55, Cond=0
+HALT encountered at time 625000 (instr fc000000)
+HALT encountered at time 635000 (instr fc000000)
+
+---- Register Dump (NORMAL TEST) ----
+R1 = 10
+R2 = 20
+R3 = 25
+R4 = 30
+R5 = 55
+
+--- Preparing for HAZARD TEST ---
+HALT encountered at time 645000 (instr fc000000)
+IF stage: taken_branch=0, EX_MEM_type=101, EX_MEM_Cond=0
+HALT encountered at time 655000 (instr fc000000)
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+WB @665000: Reg[0] <= 00000000 (from instr 00000000)
+--- Loading and Running HAZARD TEST Program ---
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+IF stage: taken_branch=0, EX_MEM_type=110, EX_MEM_Cond=0
+ID @1130000: Instr 00000000, A_in=         0, B_in=         0
+EX @1135000: Instr 00000000, alu_A=         0, alu_B=         0, ALUOut=         0, Cond=0
+ID @1140000: Instr 280a0005, A_in=         0, B_in=         0
+EX @1145000: Instr 280a0005, alu_A=         0, alu_B=         5, ALUOut=         0, Cond=0
+WB @1145000: Reg[0] <= 00000000 (from instr 00000000)
+ID @1150000: Instr 280b0000, A_in=         0, B_in=         0
+EX @1155000: Instr 280b0000, alu_A=         0, alu_B=         0, ALUOut=         5, Cond=0
+WB @1155000: Reg[10] <= 00000005 (from instr 280a0005)
+ID @1160000: Instr 296b0002, A_in=         0, B_in=         0
+EX @1165000: Instr 296b0002, alu_A=         0, alu_B=         2, ALUOut=         0, Cond=0
+WB @1165000: Reg[11] <= 00000000 (from instr 280b0000)
+ID @1170000: Instr 294affff, A_in=         5, B_in=         5
+EX @1175000: Instr 294affff, alu_A=         5, alu_B=4294967295, ALUOut=         2, Cond=0
+WB @1175000: Reg[11] <= 00000002 (from instr 296b0002)
+ID @1180000: Instr 3540fffd, A_in=         5, B_in=         0
+EX @1185000: Instr 3540fffd, alu_A=         4, alu_B=4294967293, ALUOut=         4, Cond=0
+WB @1185000: Reg[10] <= 00000004 (from instr 294affff)
+BRANCH TAKEN at time 1195000: PC=00000018 -> 00000008
+EX @1195000: Instr 00000000, alu_A=         0, alu_B=         0, ALUOut=         8, Cond=0
+ID @1200000: Instr 296b0002, A_in=         2, B_in=         2
+EX @1205000: Instr 296b0002, alu_A=         2, alu_B=         2, ALUOut=         8, Cond=0
+ID @1210000: Instr 296b0002, A_in=         2, B_in=         2
+EX @1215000: Instr 296b0002, alu_A=         4, alu_B=         2, ALUOut=         4, Cond=0
+WB @1215000: Reg[11] <= 00000004 (from instr 296b0002)
+ID @1220000: Instr 294affff, A_in=         4, B_in=         4
+EX @1225000: Instr 294affff, alu_A=         4, alu_B=4294967295, ALUOut=         6, Cond=0
+WB @1225000: Reg[11] <= 00000006 (from instr 296b0002)
+ID @1230000: Instr 3540fffd, A_in=         4, B_in=         0
+EX @1235000: Instr 3540fffd, alu_A=         3, alu_B=4294967293, ALUOut=         3, Cond=0
+WB @1235000: Reg[10] <= 00000003 (from instr 294affff)
+BRANCH TAKEN at time 1245000: PC=00000018 -> 00000008
+EX @1245000: Instr 00000000, alu_A=         0, alu_B=         0, ALUOut=         8, Cond=0
+ID @1250000: Instr 296b0002, A_in=         6, B_in=         6
+EX @1255000: Instr 296b0002, alu_A=         6, alu_B=         2, ALUOut=         8, Cond=0
+ID @1260000: Instr 296b0002, A_in=         6, B_in=         6
+EX @1265000: Instr 296b0002, alu_A=         8, alu_B=         2, ALUOut=         8, Cond=0
+WB @1265000: Reg[11] <= 00000008 (from instr 296b0002)
+ID @1270000: Instr 294affff, A_in=         3, B_in=         3
+EX @1275000: Instr 294affff, alu_A=         3, alu_B=4294967295, ALUOut=        10, Cond=0
+WB @1275000: Reg[11] <= 0000000a (from instr 296b0002)
+ID @1280000: Instr 3540fffd, A_in=         3, B_in=         0
+EX @1285000: Instr 3540fffd, alu_A=         2, alu_B=4294967293, ALUOut=         2, Cond=0
+WB @1285000: Reg[10] <= 00000002 (from instr 294affff)
+BRANCH TAKEN at time 1295000: PC=00000018 -> 00000008
+EX @1295000: Instr 00000000, alu_A=         0, alu_B=         0, ALUOut=         8, Cond=0
+ID @1300000: Instr 296b0002, A_in=        10, B_in=        10
+EX @1305000: Instr 296b0002, alu_A=        10, alu_B=         2, ALUOut=         8, Cond=0
+ID @1310000: Instr 296b0002, A_in=        10, B_in=        10
+EX @1315000: Instr 296b0002, alu_A=        12, alu_B=         2, ALUOut=        12, Cond=0
+WB @1315000: Reg[11] <= 0000000c (from instr 296b0002)
+ID @1320000: Instr 294affff, A_in=         2, B_in=         2
+EX @1325000: Instr 294affff, alu_A=         2, alu_B=4294967295, ALUOut=        14, Cond=0
+WB @1325000: Reg[11] <= 0000000e (from instr 296b0002)
+ID @1330000: Instr 3540fffd, A_in=         2, B_in=         0
+EX @1335000: Instr 3540fffd, alu_A=         1, alu_B=4294967293, ALUOut=         1, Cond=0
+WB @1335000: Reg[10] <= 00000001 (from instr 294affff)
+BRANCH TAKEN at time 1345000: PC=00000018 -> 00000008
+EX @1345000: Instr 00000000, alu_A=         0, alu_B=         0, ALUOut=         8, Cond=0
+ID @1350000: Instr 296b0002, A_in=        14, B_in=        14
+EX @1355000: Instr 296b0002, alu_A=        14, alu_B=         2, ALUOut=         8, Cond=0
+ID @1360000: Instr 296b0002, A_in=        14, B_in=        14
+EX @1365000: Instr 296b0002, alu_A=        16, alu_B=         2, ALUOut=        16, Cond=0
+WB @1365000: Reg[11] <= 00000010 (from instr 296b0002)
+ID @1370000: Instr 294affff, A_in=         1, B_in=         1
+EX @1375000: Instr 294affff, alu_A=         1, alu_B=4294967295, ALUOut=        18, Cond=0
+WB @1375000: Reg[11] <= 00000012 (from instr 296b0002)
+ID @1380000: Instr 3540fffd, A_in=         1, B_in=         0
+EX @1385000: Instr 3540fffd, alu_A=         0, alu_B=4294967293, ALUOut=         0, Cond=0
+WB @1385000: Reg[10] <= 00000000 (from instr 294affff)
+ID @1390000: Instr fc000000, A_in=         0, B_in=         0
+EX @1395000: Instr fc000000, alu_A=         0, alu_B=         0, ALUOut=         8, Cond=1
+ID @1400000: Instr xxxxxxxx, A_in=         x, B_in=         x
+EX @1405000: Instr xxxxxxxx, alu_A=         x, alu_B=         x, ALUOut=         8, Cond=1
+HALT encountered at time 1405000 (instr fc000000)
+
+---- Register Dump (HAZARD TEST) ----
+R10 (Counter) = 0
+R11 (Accumulator) = 18
+$finish called at time : 1405 ns :
