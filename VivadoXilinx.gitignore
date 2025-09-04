@@ -1,0 +1,25 @@
+Vivado/Xilinx specific files
+*.log
+*.jou
+.wdb
+.xpr
+.xpi
+.wcfg
+.str
+.Xil/
+.cache/
+project_/
+ip_catalog/
+webtalk.jou
+webtalk.log
+webtalk.tcl
+vivado.str
+hdl.var
+
+Simulation files
+*.vcd
+*.vpd
+xsim.dir/
+
+Build artifacts
+_xilinx/
