@@ -13,14 +13,6 @@ Problem
 While I have tried to implement control hazard unit. I have used a dedicated adder for calculating branch address using assign statement. The flushing takes place in stage-2. But I am not getting the correct output. 
 
 
-
-File Structure
-.
-├── src/
-│   └── risc_adv.v       # The main Verilog source for the processor core.
-└── sim/
-    └── risc_adv_tb.v    # The testbench file used for simulation.
-
 How to Run the Simulation
 This project can be simulated using any standard Verilog simulator (like Xilinx Vivado's XSim, ModelSim/QuestaSim, or Icarus Verilog).
 
@@ -51,4 +43,5 @@ Control Hazard Test: A program with a for loop that runs 5 times. This tests the
 Expected Output: R10 = 0, R11 = 10
 
 Actual Output: R10 = 0, R11 = 18. 
+
 
