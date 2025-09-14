@@ -8,6 +8,9 @@ However, this project also served as a personal deep-dive into a non-conventiona
 
 ## Core Architecture
 
+<img width="1063" height="579" alt="mips_von drawio" src="https://github.com/user-attachments/assets/ec23729d-308c-4ae6-a8a8-553a7132bd9e" />
+
+
 The processor is based on a standard 5-stage design:
 1.  **IF (Instruction Fetch):** Fetches the instruction from memory based on the Program Counter (PC).
 2.  **ID (Instruction Decode):** Decodes the instruction, reads operands from the register file, and calculates immediate values.
@@ -58,3 +61,4 @@ My pursuit of a dual-phase clocking scheme was an incredibly valuable learning e
 **The code in this repository is left in its experimental state.** It contains the non-functional control hazard logic built upon the dual-phase clocking foundation. It serves as a testament to this exploration.
 
 The clear path forward is to refactor the entire design to use a **single synchronous clock** for all pipeline stages. This is the industry-standard approach precisely because it simplifies the timing analysis of these complex feedback paths required for hazard resolution, allowing for a robust and predictable design.
+
