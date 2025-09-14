@@ -5,7 +5,7 @@
 // 
 // Create Date: 20.08.2025 17:07:31
 // Design Name: 
-// Module Name: RISC_V_TOP
+// Module Name: mips_adv
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
