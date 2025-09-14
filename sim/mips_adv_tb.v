@@ -5,7 +5,7 @@
 // 
 // Create Date: 29.08.2025 11:50:01
 // Design Name: 
-// Module Name: risc_adv_tb
+// Module Name: mips_adv_tb
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
