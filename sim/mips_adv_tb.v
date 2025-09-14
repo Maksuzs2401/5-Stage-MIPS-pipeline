@@ -25,7 +25,7 @@ module risc_adv_tb;
   integer k;
 
   // Instantiate top module
-  risc_adv uut (
+  mips_adv uut (
     .clk_in(clk_in),
     .reset(reset),
     .clk_locked(clk_locked)
