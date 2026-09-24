@@ -8,7 +8,7 @@ However, this project also served as a personal deep-dive into a non-conventiona
 
 ## Core Architecture
 
-<img width="1063" height="579" alt="mips_von drawio" src="https://github.com/user-attachments/assets/ec23729d-308c-4ae6-a8a8-553a7132bd9e" />
+<!-- <img width="1063" height="579" alt="mips_von drawio" src="https://github.com/user-attachments/assets/ec23729d-308c-4ae6-a8a8-553a7132bd9e" /> -->
 
 
 The processor is based on a standard 5-stage design:
